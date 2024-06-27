@@ -7,3 +7,7 @@ source <(micro completion bash)
 micro new service github.com/smart-echo/micro-demo/hello && cd hello && make init proto update tidy && cd -
 
 git add . && git commit -m "add hello service" && git push
+
+micro new client github.com/smart-echo/micro-demo/hello && cd hello-client && make update tidy && cd -
+
+git add . && git commit -m "add hello client" && git push
