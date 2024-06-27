@@ -1,0 +1,19 @@
+services:
+  demo:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        "IMAGE_TAG": "1-1.22-bullseye"
+    volumes:
+      - ../..:/workspaces:cached
+    networks:
+      - demo
+    command: sleep infinity
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  demo:
