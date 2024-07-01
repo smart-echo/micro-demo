@@ -22,7 +22,7 @@ tidy:
 
 .PHONY: build
 build:
-	@go build -o hello-client *.go
+	@go build -o hello *.go
 
 .PHONY: test
 test:
@@ -30,4 +30,4 @@ test:
 
 .PHONY: docker
 docker:
-	@docker build -t hello-client:latest .
+	@docker build -t hello:latest .
